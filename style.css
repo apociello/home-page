@@ -1,3 +1,11 @@
+@font-face {
+  font-display: swap; 
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/jetbrains-mono-v24-latin-regular.woff2') format('woff2');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +13,7 @@
 }
 
 body{
+    font-family: 'JetBrains Mono';
     padding: 3rem 6rem;
     background-color: #eff4f5;
     display: flex;
