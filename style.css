@@ -24,6 +24,7 @@ body{
 header {
     display: flex;
     gap: 2rem;
+    align-items: flex-start;
 }
 
 .about-me-container{
@@ -58,6 +59,50 @@ h1 {
 }
 
 img {
-    width: 400px;
+    max-width: 400px;
     object-fit: contain;
+}
+
+header img {
+    border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+    .boxes {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 350px);
+    }
+}
+
+@media (max-width:500px){
+    body {
+        padding: 2rem 1rem;
+    }
+}
+@media (max-width: 744px) {
+
+    header, 
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        gap: 4rem;
+    }
+
+    img {
+        min-width: 200px;
+        width: 100%;
+    }
+
+    .boxes {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 350px);
+    }
+
+    .box {
+        min-width: 200px;
+    }
+    
 }
