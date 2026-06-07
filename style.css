@@ -26,6 +26,13 @@ header {
     align-items: flex-start;
 }
 
+header .about-me-container p {
+    margin-bottom: 1rem;
+}
+
+header .about-me-container p:last-child {
+    margin-bottom: 0;
+}
 .boxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -107,6 +114,7 @@ header img {
 
 .links {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -118,6 +126,13 @@ footer .links img {
 footer img {
     max-width: 325px;
     width: 100%;
+}
+
+.footer-left .contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
 }
 
 header::after {
