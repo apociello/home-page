@@ -44,10 +44,32 @@ header {
     justify-content: space-around;
 }
 
-.box h2 {
-    font-size: 1.2rem;
+.description-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
+}
+
+.box .logo {
+    padding: 0.5rem 0;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+}
+
+.box svg {
+    width: 23px;
+    min-width: 23px;
+    transition: transform 0.3s ease;
+}
+
+.box svg:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .box p {
