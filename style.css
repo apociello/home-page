@@ -15,7 +15,6 @@
 body{
     font-family: 'JetBrains Mono';
     padding: 3rem 6rem;
-    
     background-color: rgb(255 255 255 / 5%);
     background-color: #ffffff;
     display: flex;
@@ -24,13 +23,7 @@ body{
 }
 
 header {
-    display: flex;
-    gap: 2rem;
     align-items: flex-start;
-}
-
-.about-me-container{
-    padding: 1rem;
 }
 
 .boxes {
@@ -69,16 +62,29 @@ h1 {
 }
 
 img {
-    max-width: 400px;
     object-fit: contain;
 }
 
 header img {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    max-width: 320px;
     border-radius: 2px;
 }
 
+footer img {
+    max-width: 400px;
+}
+
+header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .logo img {
-    width: 100px;
+    width: 125px;
 }
 
 @media (max-width: 1024px) {
@@ -101,22 +107,33 @@ header img {
         align-items: center;
     }
 
+    header img {
+        float: none;
+        margin-right: 0;
+        display: block;
+        margin-left: auto;  
+        margin-right: auto; 
+    }
+
     footer {
         gap: 4rem;
     }
 
+    h1 {
+        text-align: center;
+    }
+
     img {
-        min-width: 200px;
         width: 100%;
+    }
+
+    header img,
+    .box {
+        min-width: 200px;
     }
 
     .boxes {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 350px);
     }
-
-    .box {
-        min-width: 200px;
-    }
-    
 }
