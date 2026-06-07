@@ -64,10 +64,11 @@ header {
 .box svg {
     width: 23px;
     min-width: 23px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
-.box svg:hover {
+.box svg:hover,
+.links img:hover{
     cursor: pointer;
     transform: scale(1.2);
 }
@@ -102,6 +103,16 @@ header img {
     margin-bottom: 1rem;
     max-width: 320px;
     border-radius: 2px;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer .links img {
+    width:25px;
+    transition: transform 0.2s ease;
 }
 
 footer img {
@@ -148,6 +159,10 @@ header::after {
 
     footer {
         gap: 4rem;
+    }
+
+    .links {
+        justify-content: center;
     }
 
     h1 {
