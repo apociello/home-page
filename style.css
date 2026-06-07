@@ -19,7 +19,7 @@ body{
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 header {
@@ -36,7 +36,7 @@ header .about-me-container p:last-child {
 .boxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .box {
