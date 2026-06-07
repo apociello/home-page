@@ -29,7 +29,6 @@ header {
 .boxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
     gap: 4rem;
 }
 
@@ -101,7 +100,6 @@ header::after {
 @media (max-width: 1024px) {
     .boxes {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, auto);
     }
 }
 
@@ -145,6 +143,5 @@ header::after {
 
     .boxes {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
     }
 }
