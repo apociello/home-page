@@ -15,15 +15,31 @@
 body{
     font-family: 'JetBrains Mono';
     padding: 3rem 6rem;
-    background-color: rgb(255 255 255 / 5%);
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
 
+h1 {
+    margin-bottom: 1rem;
+}
+
+img {
+    object-fit: contain;
+}
+
+/* - - - - - HEADER - - - - - */
 header {
     align-items: flex-start;
+}
+
+header img {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    max-width: 320px;
+    border-radius: 2px;
 }
 
 header .about-me-container p {
@@ -33,6 +49,14 @@ header .about-me-container p {
 header .about-me-container p:last-child {
     margin-bottom: 0;
 }
+
+header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* - - - - - MAIN - - - - - */
 .boxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -51,6 +75,14 @@ header .about-me-container p:last-child {
     justify-content: space-around;
 }
 
+.box .logo {
+    padding: 0.5rem 0;
+}
+
+.logo img {
+    width: 125px;
+}
+
 .description-header {
     display: flex;
     justify-content: space-between;
@@ -58,10 +90,6 @@ header .about-me-container p:last-child {
     align-items: center;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
-}
-
-.box .logo {
-    padding: 0.5rem 0;
 }
 
 .box h2 {
@@ -74,58 +102,15 @@ header .about-me-container p:last-child {
     transition: transform 0.2s ease;
 }
 
-.box svg:hover,
-.links img:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
 .box p {
     font-size: 0.9rem;
 }
 
+/* - - - - - FOOTER - - - - - */
 footer {
     display: flex;
     gap: 2rem;
     align-items: center;
-}
-
-.footer-right {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-}
-
-h1 {
-    margin-bottom: 1rem;
-}
-
-img {
-    object-fit: contain;
-}
-
-header img {
-    float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    max-width: 320px;
-    border-radius: 2px;
-}
-
-.links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-footer .links img {
-    width:25px;
-    transition: transform 0.2s ease;
-}
-
-footer img {
-    max-width: 325px;
-    width: 100%;
 }
 
 .footer-left .contact-text {
@@ -135,28 +120,49 @@ footer img {
     margin-bottom: 1.5rem;
 }
 
-header::after {
-    content: '';
-    display: block;
-    clear: both;
+.footer-left .links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.logo img {
-    width: 125px;
+.footer-left .links img {
+    width:25px;
+    transition: transform 0.2s ease;
 }
 
+.footer-right {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-right img {
+    max-width: 325px;
+    width: 100%;
+}
+
+/* - - - - - HOVER - - - - - */
+.box svg:hover,
+.links img:hover{
+    transform: scale(1.2);
+}
+
+/* - - - - - MEDIA - - - - - */
 @media (max-width: 1024px) {
     .boxes {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width:500px){
-    body {
-        padding: 2rem 1rem;
-    }
-}
 @media (max-width: 744px) {
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
 
     header, 
     footer {
@@ -172,22 +178,6 @@ header::after {
         margin-right: auto; 
     }
 
-    footer {
-        gap: 4rem;
-    }
-
-    .links {
-        justify-content: center;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    img {
-        width: 100%;
-    }
-
     header img,
     .box {
         min-width: 200px;
@@ -195,5 +185,19 @@ header::after {
 
     .boxes {
         grid-template-columns: 1fr;
+    }
+
+    footer {
+        gap: 4rem;
+    }
+
+    .links {
+        justify-content: center;
+    }
+}
+
+@media (max-width:500px){
+    body {
+        padding: 2rem 1rem;
     }
 }
